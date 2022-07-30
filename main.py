@@ -22,7 +22,7 @@ def run():
     for i in wordInGameList:        
         print(wordInGameList.index(i))
         print(i,end=" ")
-    # Esto no deberia estar aqui
+    
 
     
 
