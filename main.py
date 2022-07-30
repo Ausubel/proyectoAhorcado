@@ -1,10 +1,9 @@
 def run():
-    resp = input('¿Desea iniciar?(y/n): ').capitalize()
-    assert resp == 'Y' or resp == 'N', 'Ingrese solo y o n'
-    if resp == 'N':
-        print('El programa finalizó, gracias por su visita')
-    else:
-        print(30*'*'+'BIENVENIDO'+'*'*30)    
+    puntos = 0
+    palabraEnJuego = word()
+    while True:
+        menu(word())
+        letra = input("Ingrese la letra a buscar")
 
 
 if __name__=='__main__':
