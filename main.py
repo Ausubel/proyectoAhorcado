@@ -1,15 +1,32 @@
-import random as rdn
-def word():
-    with open("./DATA.txt","r") as f:                
-        a = [i.replace("\n", "") for i in f]
-    return a.pop(rnd.randint(0, len(a)-1))
+from random import randint
+def getWord():
+    with open("./Data/palabras.txt","r") as f:                
+        a = [i for i in f]
+    return a.pop(randint(0, len(a)-1)).replace("\n", "")
 
 def run():
-    puntos = 0
-    palabraEnJuego = word()
+    points = 0
+    wordInGame = "ISABOTH"
+    wordInGameList = [i for i in wordInGame]
+    wordInGameUnderscore = str("___ "*len(wordInGame)) 
+
+    lock = True
+    letras = []
     while True:
-        menu(word())
-        letra = input("Ingrese la letra a buscar")
+        aux = input("Ingrese la letra: ")
+        letras.append(aux)
+        if aux.isalpha():
+            break        
+        else:
+            print("Ingrese un valor del alfabeto")
+    for i in wordInGameList:        
+        print(wordInGameList.index(i))
+        print(i,end=" ")
+    # Esto no deberia estar aqui
+
+    
+
+
 
 
 if __name__=='__main__':
