@@ -1,3 +1,9 @@
+import random as rdn
+def word():
+    with open("./DATA.txt","r") as f:                
+        a = [i.replace("\n", "") for i in f]
+    return a.pop(rnd.randint(0, len(a)-1))
+
 def run():
     resp = input('¿Desea iniciar?(y/n): ').capitalize()
     assert resp == 'Y' or resp == 'N', 'Ingrese solo y o n'
